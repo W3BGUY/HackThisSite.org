@@ -1,0 +1,20 @@
+/////////////////////////////////////////////////////////////////////////////////
+Hash Suite 3.4 ,,Machine:DESKTOP-AJFPRUE,,Date 11/04/16,,Time 18:12:24
+
+Processor Name,Frequency,L1,L2,L3,Ram,Other Information,
+Intel Core i7-6700HQ, 2.60GHz,64KB,256KB,6MB,24GB DDR3-2133,Windows 10  64-bit,
+
+Format,Threads,1,10,100,1000,10000,65536,100000,1000000,
+LM,8,482M,,,,,,,,
+NTLM,8,0,,,,,,,,
+Raw-MD5,8,357M,,,,,,,,
+Raw-SHA1,8,160M,,,,,,,,
+Raw-SHA256,8,87.8M,,,,,,,,
+Raw-SHA512,8,32.5M,,,,,,,,
+,,1,4,16,64,,,,,
+DCC,8,293M,,,,,,,,
+SSHA,8,136M,,,,,,,,
+MD5CRYPT,8,378K,,,,,,,,
+DCC2,8,7.51K,,,,,,,,
+WPA-PSK,8,,,,,,,,,
+BCRYPT,8,,,,,,,,,

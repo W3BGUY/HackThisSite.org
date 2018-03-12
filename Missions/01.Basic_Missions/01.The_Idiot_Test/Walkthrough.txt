@@ -1,0 +1,12 @@
+https://www.hackthissite.org/missions/basic/1/index.php
+
+Description:
+  This level is what we call "The Idiot Test", if you can't complete it, don't give up on learning all you can, but, don't go begging to 
+  someone else for the answer, thats one way to get you hated/made fun of. Enter the password and you can continue. 
+
+Solution:
+  View page source.  Above the password field you can see the commented out text: 
+    <!-- the first few levels are extremely easy: password is fb815e75 -->
+
+    
+  Enter the password into the page: fb815e75
