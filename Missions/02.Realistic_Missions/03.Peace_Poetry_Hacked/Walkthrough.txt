@@ -1,0 +1,28 @@
+https://www.hackthissite.org/playlevel/3/
+https://www.hackthissite.org/missions/realistic/3/
+
+Description:
+  Peace Poetry: HACKED
+  A little girl made a website to post poetry related to peace and understanding. American fascists have hacked this website replacing it with Hitler-esque 
+  propaganda. Can you repair the website? 
+  Difficulty rating: Moderate.
+  
+  From: PeacePoetry 
+
+  Message: I run this website where people can read and submit peace-related poetry. I am doing this out of good will towards others, and I 
+    don't see why I would be making enemies out of this, but some real ass hole hacked my website posting a bunch of ignorant aggressive propaganda 
+    on the front page. And I made that website a while ago, and I no longer have access to it. Do you think you can hack in and change it back? Please? 
+    Oh, and bonus points if you message me the name of the bastard who did this!
+    
+    
+Solution:
+  We are initially presented with a page that has obviously been hacked.  I checked out the page source as a first step and found the following comment on it.
+  
+    <!--Note to the webmasterThis website has been hacked, but not totally destroyed. The old website is still up. I simply copied the old index.html file to 
+    oldindex.html and remade this one. Sorry about the inconvenience.-->
+  
+  As expected, loading oldindex.html does show the original page, including links to read the poetry and submit poetry.
+  
+  My thought is to try and create a new poem titled index.html, with the source in it.  That did not work, though.  At least not exactly like that...
+  
+    

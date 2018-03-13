@@ -1,0 +1,28 @@
+https://www.hackthissite.org/playlevel/2/
+https://www.hackthissite.org/missions/realistic/2/
+
+Description:
+  Chicago American Nazi Party
+  Racist pigs are organizing an 'anti-immigrant' rally in Chicago. Help anti-racist activists take over their website! 
+  Difficulty rating: Easy
+  
+  From: DestroyFascism 
+
+  Message: I have been informed that you have quite admirable hacking skills. Well, this racist hate group is using their website to organize a mass 
+    gathering of ignorant racist bastards. We cannot allow such bigoted aggression to happen. If you can gain access to their administrator page and post 
+    messages to their main page, we would be eternally grateful.
+
+
+Solution:
+  Initially provided with a basic blog type page, with no obvious links.  Looking at the page source, is the first step.
+  At the bottom of the page there is a hidden link to the update.php page.  Let's go there.
+  
+  The update.php page takes us to a login page, asking for a username and password.  Nothing obvious in the source.  This pagesends the username and password to the 
+  update2.php page.  Navigating directly there returns a invalid message.
+  
+  Next I tried entering in a BS password, thought I did not see anything special about how it is sent.  So let's try a basic SQL injection on the fields.
+  I entered the following in both the username and password fields:
+  
+    ' OR '1'='1
+    
+  Success.  That gets me through to the next mission.

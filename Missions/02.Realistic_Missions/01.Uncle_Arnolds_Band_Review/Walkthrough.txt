@@ -1,0 +1,24 @@
+https://www.hackthissite.org/playlevel/1/
+https://www.hackthissite.org/missions/realistic/1/
+
+Description:
+  Uncle Arnold's Local Band Review
+  Your friend is being cheated out of hundreds of dollars. Help him make things even again! 
+  Difficulty rating: Easy.
+  
+  From: HeavyMetalRyan 
+  
+  Message: Hey man, I need a big favour from you. Remember that website I showed you once before? Uncle Arnold's Band Review Page? Well, a long time 
+    ago I made a $500 bet with a friend that my band would be at the top of the list by the end of the year. Well, as you already know, two of my band 
+    members have died in a horrendous car accident... but this ass hole still insists that the bet is on!
+    I know you're good with computers and stuff, so I was wondering, is there any way for you to hack this website and make my band on the top of the 
+    list? My band is Raging Inferno. Thanks a lot, man!
+  
+  
+Solution:
+  We are presented with a forum type site that has voting options on it, for numerous bands.  My first thought is to edit the value of the vote input, for the 
+  needed band, and then vote.  I changed the #5 vote to a 100, and hit the vote button.  
+  
+  That looks to be the solution, as it provided me with a success. :)
+  
+  
