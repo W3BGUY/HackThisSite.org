@@ -1,0 +1,16 @@
+https://www.hackthissite.org/missions/basic/4/
+
+Description:
+  An email script has been set up, which sends the password to the administrator. Requirements: HTML knowledge, an email address
+  
+  This time Sam hardcoded the password into the script. However, the password is long and complex, and Sam is often forgetful. 
+  So he wrote a script that would email his password to him automatically in case he forgot. Here is the script:
+
+Solution:
+  View the page source.  Notice the hidden input field with Sam's email address hard-coded.  Edit the local HTML and enter your password.  Then hit the 
+  Send password to Sam button.  You should see a confirmation page, and an email with the password in it.
+  
+    Sam,
+    Here is the password: '92f7aa97'.
+  
+  Return to the main page and enter the password.

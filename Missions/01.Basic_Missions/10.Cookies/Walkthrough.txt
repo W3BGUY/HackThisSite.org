@@ -1,0 +1,29 @@
+https://www.hackthissite.org/missions/basic/10/
+
+Description:
+  This time Sam used a more temporary and "hidden" approach to authenticating users, but he didn't think about whether or not those users knew their way around javascript...
+  
+  Enter password.  Please enter a password to gain access to level 10.
+  
+Solution:
+  This level has no information, so my first thought is to see what's in the directory using level 8.  So I run the following command there.
+    <!--#exec cmd="../../10" -->
+    
+  This returns the following information:
+    If you are trying to use server side includes to solve the challenge, you are on the right track: but I have limited the commands allowed to 
+    ones relevant towards finding the password file for security reasons(because there will always be that one person who decides to execute 
+    some rather nasty commands). So please manipulate your code so that it is a little more pertaining to the level.
+    
+  So this level does not use that method.  Next thought is to check the page source for clues.  Which I did not find.
+  Next I tried some SQL injection on the field by entering the following options:
+    # OR 1=1 --
+    ' OR '1'='1
+    ' OR '1'='1' --
+    ' OR '1'='1' /*
+  
+  None of those worked either.  My next thought was to look at the cookies on the site.  That's where I found the solution.  There is a cookie called: 
+    level10_authorized
+  The default value of the cookie is: no
+  I changed that to yes, and entered some random data into the password field, and was allowed to enter.
+  
+  

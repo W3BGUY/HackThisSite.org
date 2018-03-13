@@ -1,0 +1,13 @@
+https://www.hackthissite.org/missions/basic/3/index.php
+
+Description:
+  An email script has been set up, which sends the password to the administrator. Requirements: HTML knowledge, an email address
+  
+  This time Network Security Sam remembered to upload the password file, but there were deeper problems than that.
+  
+Solution:
+  View the page source.  Notice the hidden input field, with the password php file as the value.
+  Try loading that page: https://www.hackthissite.org/missions/basic/3/password.php
+  The body of the page is the password: d36c8e6d.
+  Return to the main page and enter that password.
+  

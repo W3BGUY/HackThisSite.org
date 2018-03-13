@@ -1,0 +1,29 @@
+https://www.hackthissite.org/missions/basic/6
+
+Description:
+  An encryption system has been set up, which uses an unknown algorithm to change the text given. Requirements: Persistence, some general cryptography knowledge.
+  
+  Network Security Sam has encrypted his password. The encryption system is publically available and can be accessed with this form:
+  You have recovered his encrypted password. It is:
+  
+    9dhhfkh:
+
+  Decrypt the password and enter it below to advance to the next level.
+
+Solution:
+  As a test I entered aaaaa into the encrypter.  It returned abcde.  So each letter is incremented by the number of characters equal to it's current position in the string.
+  
+    aaaaa
+    01234
+    abcde
+    
+    So to decrypt the password, we should just need to reverse that process.
+    
+    0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
+    
+    9dhhfkh:
+    01234567
+    9cfebfb3
+    
+    Return to the main page and enter the password.
+    

@@ -1,0 +1,41 @@
+https://www.hackthissite.org/missions/basic/11
+
+Description:
+  Sam decided to make a music site. Unfortunately he does not understand Apache. This mission is a bit harder than the other basics.
+  
+  I love my music! "Come Down in Time" is the best!
+  
+Solution:
+  This level starts off with just the text above, and no clues.  My first thought is to check the page source again.  That reveals this hint:
+    <!--We even have our own collection - if you could find it!-->
+  
+  That hint makes me think we need directory traversal.  I checked for a robots.txt file, and a .htaccess file.  Neither worked, but the text on the page keeps changing with
+  each reload.
+    I love my music! "Heart in the Right Place" is the best!
+    I love my music! "Sleeping with the Past" is the best!
+    I love my music! "Candle in the Wind" is the best!
+  
+  After a couple of Google searches, I see that each song that comes up is by Elton John.  I tried a couple of different sub directories:
+    elton
+    eltonjohn
+    elton_john
+    e
+  
+  The last one returned the directory listing.  There I now see the Parent directory and an l directory.
+  Moving to the l directory shows the parent directory and t.  At this point it looks like I'll be spelling out Elton John as directories.
+  I've now made it to the https://www.hackthissite.org/missions/basic/11/e/l/t/o/n/ and there are no more sub directories listed.
+  
+  I return to the main directory and start trying robots.txt and .htaccess in each directory.
+  Once I get back to the e/l/t/o/n directory .htaccess is not protected and returns the following information:
+  
+    IndexIgnore DaAnswer.* .htaccess
+    <Files .htaccess>
+    order allow,deny
+    allow from all
+    </Files>
+  
+  The next obvious try is the ignored DaAnswer directory/file.  https://www.hackthissite.org/missions/basic/11/e/l/t/o/n/DaAnswer/ returns:
+    The answer is around! Just look a little harder.
+  
+  Since the rest has been simple once I found my way to a hint, I tried using around as the password at the index.php page.  That turned out to be the correct password.
+

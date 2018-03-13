@@ -1,0 +1,29 @@
+https://www.hackthissite.org/missions/basic/9/
+
+Description:
+  The password is again hidden in an unknown file. However, the script that was previously used to find it has some limitations. 
+  Requirements: Knowledge of SSI, unix directory structure.
+
+  Network Security Sam is going down with the ship - he's determined to keep obscuring the password file, no matter how many times people manage to 
+  recover it. This time the file is saved in /var/www/hackthissite.org/html/missions/basic/9/.
+
+  In the last level, however, in my attempt to limit people to using server side includes to display the directory listing to level 8 only, 
+  I have mistakenly screwed up somewhere.. there is a way to get the obscured level 9 password. See if you can figure out how...
+
+  This level seems a lot trickier then it actually is, and it helps to have an understanding of how the script validates the user's input. 
+  The script finds the first occurance of '<--', and looks to see what follows directly after it. 
+
+Solution:
+  This sounds like it uses the same script from the last level, but we need to look in a different directory.  So let's return to 8 and try:
+  <!--#exec cmd="ls ../../9" -->
+  
+  This returns the following information:
+  
+    Hi, index.php p91e283zc3.php!
+    
+    Your name contains 24 characters.
+  
+  Now we have the password file for level 9.  Loading that file returns: 1806a8f7.
+  
+  Return to the main page and enter the password.
+  

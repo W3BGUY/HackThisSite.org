@@ -1,0 +1,16 @@
+https://www.hackthissite.org/missions/basic/5/
+
+Description:
+  Similar to the previous challenge, but with some extra security measures in place. Requirements: HTML knowledge, JS or FF, an email address.
+  
+  Sam has gotten wise to all the people who wrote their own forms to get the password. Rather than actually learn the password, he decided to make his 
+  email program a little more secure.
+  
+Solution:
+  View page source.  Notice the hidden input field with Sam's email address hard-coded.  Edit the local HTML and enter your password.  Then hit the 
+  Send password to Sam button.  You should see a confirmation page, and an email with the password in it.
+  
+    Sam,
+    Here is the password: '62a338b3'.
+  
+  Return to the main page and enter the password.

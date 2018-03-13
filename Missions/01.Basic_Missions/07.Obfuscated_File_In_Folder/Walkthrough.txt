@@ -1,0 +1,49 @@
+https://www.hackthissite.org/missions/basic/7/
+
+Description:
+  The password is hidden in an unknown file, and Sam has set up a script to display a calendar. Requirements: Basic UNIX command knowledge.
+  
+  This time Network Security sam has saved the unencrypted level7 password in an obscurely named file saved in this very directory.
+  In other unrelated news, Sam has set up a script that returns the output from the UNIX cal command. Here is the script:
+  Enter the year you wish to view and hit 'view'.
+
+Solution:
+  Since Sam is using a file in the current directory, we need to see what files are in the directory.  The field that returns the results of the UNIX Cal command
+  provides us with the opening.  Hitting the view button without anything in the field returns the following:
+  
+      
+            March 2018
+        Mon Tue Wed Thu Fri Sat Sun
+                      1   2   3   4
+          5   6   7   8   9  10  11
+         12  13  14  15  16  17  18
+         19  20  21  22  23  24  25
+         26  27  28  29  30  31
+
+  UNIX commands are ended and concatenated with the ; character.  So, my first thought is to just enter
+    ; ls
+  into the field and hit view.  That returns the following:
+  
+      
+            March 2018
+        Mon Tue Wed Thu Fri Sat Sun
+                      1   2   3   4
+          5   6   7   8   9  10  11
+         12  13  14  15  16  17  18
+         19  20  21  22  23  24  25
+         26  27  28  29  30  31
+        
+        
+        .
+        ..
+        
+        cal.pl
+        index.php
+        k1kh31b1n55h.php
+        level7.php
+    
+  Now we have the file name.  I try loading that page and I receive the password:  cd20917e
+  
+  Return to the main page and enter the password now.
+  
+    

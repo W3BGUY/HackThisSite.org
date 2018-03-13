@@ -1,4 +1,8 @@
+https://www.hackthissite.org/missions/basic/2/
+
 Description:
+  A slightly more difficult challenge, involving an incomplete password script. Requirements: Common sense.
+  
   Network Security Sam set up a password protection script. He made it load the real password from an unencrypted text file and compare it to the 
   password the user enters. However, he neglected to upload the password file...
   

