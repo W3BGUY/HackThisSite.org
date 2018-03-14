@@ -25,4 +25,8 @@ Solution:
   
   My thought is to try and create a new poem titled index.html, with the source in it.  That did not work, though.  At least not exactly like that...
   
+  With a little playing around I realized that the poems are held in a subfolder.  So I paste the oldindex.html source into the poem body and set the 
+  poem name as ../index.html
+
+  That proved to be the solution...
     
