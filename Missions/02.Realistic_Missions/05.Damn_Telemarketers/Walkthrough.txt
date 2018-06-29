@@ -1,0 +1,58 @@
+https://www.hackthissite.org/playlevel/5/
+https://www.hackthissite.org/missions/realistic/5/
+
+Description:
+  Damn Telemarketers!
+  Telemarketers are invading people's privacy and peace and quiet. Get the password for the administrative section 
+  of the site to delete their database and return the privacy of their victims!
+  Difficulty rating: Moderate.
+
+  From: spiffomatic64
+
+  Message: Yo! This is Spiffomatic64 from Hackthissite.org! I'm a bit of a hacker myself as you can see, but I 
+    recently came upon a problem I couldn't resolve.....
+    Lately I've been getting calls day and night from the telemarketing place. I've gone to their website and 
+    hacked it once deleting all of their phone numbers so they wouldn't call me anymore. That was a temporary 
+    fix but they put their database back up, this time with an encrypted password. When I hacked them I noticed 
+    everything they used was 10 years out of date and the new password seems to be a 'message digest'. I have 
+    done some research and I think it could be something like a so-called hash value. I think you could somehow 
+    reverse engineer it or brute force it. I also think it would be a good idea to look around the server for 
+    anything that may help you.
+
+
+Solution:
+  We are presented with a the telemarketers site, which has a few links.  My first thoughts is to start reviewing 
+  the page source for each page.
+ 
+  Main.htm
+    Nothing that stands out.
+
+  News.htm
+    Nothing that stands out.
+
+  submit.html
+    Goes to a password page.  Looking at the source we see that the page submits to an admin.php file in the secred subdirectory. 
+    I tried loading just the subdirectory.  That directory is not protected, and shows the contents.  I see the admin.php file
+    as well as an admin.bak.php file.  Let's load the bak file...
+
+  secret/admin.bak.php
+    This page returns only the following:
+      error matching hash 3915b43dd44e43a43af9216fbd7f9f72
+
+    Let's try to decreypt that hash.  Hmm...  No luck.  Everything says it is not a valid hash.  Let's try it as the password,
+    instead.  No luck there...  Let's continue checking links from the main page.
+
+  contact.htm
+    This page appears to just have some email links, nothing useful.
+
+  robots.txt
+    This shows us the previously found secret directory, as well as a lib directory.  Let's check that.
+
+  /lib
+    This has another file called hash.  That should be very useful. Looking at this file it appears to be a c file.
+    So let's grab it and see what it does.
+
+    No luck, but we do see that there is a reference to the hash being MD4.  LEt's try to decrypt it again as an MD4.
+
+
+    
